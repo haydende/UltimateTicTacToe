@@ -1,0 +1,3 @@
+
+class BoardIsCompleteError(Exception):
+    pass

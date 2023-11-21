@@ -48,7 +48,7 @@ class SubBoardTests(unittest.TestCase):
         # Then...
         # ...I capture the raised Exception and assert the message is correct
         the_exception = cm.exception
-        self.assertEquals("Position 1 has already been taken.", str(the_exception))
+        self.assertEqual("Position 1 has already been taken.", str(the_exception))
 
     def test_cannot_add_to_outofbounds(self):
         """
@@ -68,7 +68,7 @@ class SubBoardTests(unittest.TestCase):
         # Then...
         # ...I capture the raised Exception and assert the message is correct
         the_exception = cm.exception
-        self.assertEquals("Position 10 does not exist on this board.", str(the_exception))
+        self.assertEqual("Position 10 does not exist on this board.", str(the_exception))
 
     def test_cannot_add_to_complete_board(self):
         """
@@ -90,7 +90,7 @@ class SubBoardTests(unittest.TestCase):
         # Then...
         # ...I capture the raised Exception and assert the message is correct
         the_exception = cm.exception
-        self.assertEquals("This board has already been completed. No more moves can be made", str(the_exception))
+        self.assertEqual("This board has already been completed. No more moves can be made", str(the_exception))
 
     def test_no_marked_winner_in_drawn_board(self):
         """
@@ -106,7 +106,7 @@ class SubBoardTests(unittest.TestCase):
 
         # Then...
         # ...there should be no marked winner
-        self.assertEquals(None, sub_board.get_owner())
+        self.assertEqual(None, sub_board.get_owner())
 
         # And...
         # ...the board should be marked as complete

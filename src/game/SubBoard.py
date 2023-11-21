@@ -1,20 +1,13 @@
 from src.exception.BoardIsCompleteError import BoardIsCompleteError
 from src.exception.InvalidPositionError import InvalidPositionError
+from src.game.Board import Board
 
 
-class SubBoard:
+class SubBoard(Board):
 
     def __init__(self):
-        self.positions = []
-        self.owner = None
-        self.board_complete = False
+        super().__init__()
         self.create_positions()
-
-    def is_board_complete(self):
-        return self.board_complete
-
-    def get_owner(self):
-        return self.owner
 
     def create_positions(self):
         for _ in range(0, 9):

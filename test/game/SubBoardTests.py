@@ -24,6 +24,7 @@ def fill_positions_with_win(sub_board, winning_player, losing_player):
     sub_board.claim_position(2, losing_player)
     sub_board.claim_position(6, winning_player)
 
+# TODO: Migrate these tests into Board test class
 
 class SubBoardTests(unittest.TestCase):
 

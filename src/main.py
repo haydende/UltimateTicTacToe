@@ -5,5 +5,4 @@ def main():
     board = ttb.TicTacToeBoard()
     ttb.start()
 
-
 main()
